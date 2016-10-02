@@ -1,0 +1,155 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <title>Free Runner Multiplayer</title>
+    <link href='http://fonts.googleapis.com/css?family=Coda' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+  	<link rel="stylesheet" type="text/css" href="/css/styleMultiplayer.css">
+    <!-- <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+	<nav>
+		<i id="battleBtn" class="fa fa-cube quitMulti" aria-hidden="true"></i>
+		<i id="resultsBtn" class="fa fa-trophy" aria-hidden="true"></i>
+<!-- 		<i id="optionsBtn" class="fa fa-cog" aria-hidden="true"></i> -->
+	</nav>
+
+
+
+		<div id="messageDiv">
+			<p>Waiting for other player to join...</p>
+		</div>
+
+	<div class="laneWrapper">
+
+
+		<div class="ledge-block"></div>
+		<div class="ledge-block2"></div>
+		<div class="ledge-block3"></div>
+		<div class="ledge-block4"></div>
+		
+		<img class="ledge-pic" src="/css/images/startLedge3.png">
+
+			<div class="lane-top-block"></div>
+
+		<div class="ledge-side-block"></div>
+
+
+		<div class="lane">
+		</div>
+
+<div class='boxside'>
+		<div class="box">
+			<img id="pcube" src="/css/images/pcube.png">
+			<!-- <img id="currentHat" class="hat" src="css/images/hat1.png"> -->
+		</div>
+</div>
+
+	</div>
+
+	<div class="laneWrapper2">
+
+		<div class="ledge-block1-2"></div>
+		<div class="ledge-block2-2"></div>
+		<div class="ledge-block3-2"></div>
+		<div class="ledge-block4-2"></div>
+		<div class="ledge-block5"></div>
+		
+		<img class="ledge-pic2" src="/css/images/startLedge3.png">
+
+			<div class="lane-top-block"></div>
+
+			<div class="ledge-side-block"></div>
+
+
+
+		<div class="lane2">
+<!-- 		    <div class="h1z hurdle" id="hurdle2_1-" style="position:fixed;left:50%;top:168.5px;"><img id="hcube" src="/css/images/hcube.png"></div>
+		    <div class="h2z hurdle" id="hurdle2_2-" style="position:fixed;left:48%;top:191.4px;"><img id="hcube" src="/css/images/hcube.png"></div>
+		    <div class="h3z hurdle" id="hurdle2_3-" style="position:fixed;left:46%;top:214.3px;"><img id="hcube" src="/css/images/hcube.png"></div>
+		    <div class="h4z hurdle" id="hurdle2_4-" style="position:fixed;left:44%;top:237.2px;"><img id="hcube" src="/css/images/hcube.png"></div>
+		    <div class="h5z hurdle" id="hurdle2_5-" style="position:fixed;left:42%;top:260.1px;"><img id="hcube" src="/css/images/hcube.png"></div> -->
+
+		</div>
+		<div class="box2">
+			<img id='pcube' src='/css/images/pcube.png'>
+			<!-- <img id="currentHat" class="hat" src="/css/images/hat1.png"> -->
+		</div>
+
+	</div>
+
+	<div class="modal fade" id="resultsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+		        <h4 class="modal-title" id="myModalLabel">Game over!</h4>
+		      </div>
+		      <div class="modal-body gameResults">
+		    	<h3 id="gameResultsWinner">Patrick wins!</h3>
+		    	<div id="podiumDiv">
+			    	<div id="rematchDiv">
+			    		<!-- <button type="button" class="btn btn-default rematch">Rematch?</button> -->
+			    	</div>
+		    		<div id="winner">
+		    			<div id="podiumSpot1">
+			    			<span id="overheadName1"></span>
+			    			<span id="spot1rematch"><i class="fa fa-times-circle" id="notReady" aria-hidden="true"></i></span>
+		    			</div>
+		    			<div id="winnerCube">
+							<img id="pcube" src="/css/images/pcube.png">
+							<!-- <img id="currentHat" class="hat" src="css/images/hat1.png"> -->
+						</div>
+		    		</div>
+		    		<div id="loser">
+		    			<div id="podiumSpot2">
+			    			<span id="overheadName2"></span>
+			    			<span id="spot2rematch"><i class="fa fa-times-circle" id="notReady" aria-hidden="true"></i></span>
+		    			</div>
+		    			<div id="loserCube">
+							<img id="pcube" src="/css/images/pcube.png">
+							<!-- <img id="currentHat" class="hat" src="css/images/hat1.png"> -->
+						</div>
+		    		</div>
+		    		<img id="podium" src="/css/images/podium.png">
+		    	</div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default quitMulti" data-dismiss="modal">Quit</button>
+		      </div>
+		    </div>
+		  </div>
+	</div>
+
+				<!-- signout modal -->
+	<div class="modal fade bs-example-modal-sm" id="leaveMultiModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+	  <div class="modal-dialog modal-sm" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h5 class="modal-title" id="myModalLabel">Are you sure you want to leave multiplayer?</h5>
+		      </div>
+<!-- 		      <div class="modal-body">
+		        <h2><span class="glyphicon glyphicon-ban-circle"></span></h2> <h4>Try Again</h4>
+		      </div> -->
+		      <div class="modal-footer">
+		      	<button type="button" class="btn btn-default" id="leaveConfirm">Yes</button>
+		        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+		      </div>
+		    </div>
+		  </div>
+	</div>
+
+
+<script src="https://use.fontawesome.com/2ce3b4e69a.js"></script>
+<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+<script type="text/javascript" src="/freeRunnerMultiplayerLogic.js"></script>
+</body>
+</html>

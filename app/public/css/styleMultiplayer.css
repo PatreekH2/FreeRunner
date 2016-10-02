@@ -1,0 +1,725 @@
+	body{
+		overflow: hidden;
+		/*background-color: white !important;*/
+	}
+
+	.boxside{
+		position: fixed;
+    	top: 168.5px;
+    	left: 336px;
+		z-index: +4;
+/*		background-color: red;*/
+		width: 20px;
+    	height: 20px;
+	}
+
+	/*Second lane*/
+
+	.laneWrapper2{
+		overflow: hidden;
+		position: absolute;
+		z-index: -2;
+		top: -14%;
+		width: 100%;
+		height: 85%;
+	    -webkit-transform: rotate(0deg);
+	    -moz-transform: rotate(0deg);
+	    -ms-transform: rotate(0deg);
+	    -o-transform: rotate(0deg);
+	    transform: rotate(0deg);
+	}
+
+	.box {
+    	/*background-image: url(pcube.png);*/
+    	width: 30px;
+    	height: 30px;
+    	/*background:#ccc;*/
+    	position: relative;
+    	z-index: +4;
+	}
+
+	.box2{
+		position: fixed;
+    	top: 168.5px;
+    	left: 336px;
+		z-index: +4;
+		/*background-image: url(pcube.png);*/
+    	width: 30px;
+    	height: 30px;
+    	/*background:#ccc;*/
+	}
+
+	.lane2{
+		width: 100%;
+		top: 178px;
+		border-top: 2px solid black;
+		border-bottom: 2px solid black;
+		overflow: hidden;
+		height: 122px;
+		position: absolute;
+		/*z-index: +1;*/
+	}
+
+	.ledge-pic2{
+		top: 177px;
+		left: 108px;
+		width: 400px;
+		height: 1375px;
+		position: fixed;
+		z-index: -1;
+		overflow: hidden;
+	}
+
+	.ledge-block1-2{
+		background-color: white;
+		top: 170px;
+		position: absolute;
+		z-index: +2;
+		height: 137.3px;
+		width: 200px;
+	}
+
+	.ledge-block2-2{
+		background-color: white;
+		top: 171px;
+		position: absolute;
+		z-index: +2;
+		height: 10px;
+		width: 309px;
+	}
+
+	.ledge-block4-2{
+		background-color: white; 
+	    position: absolute; 
+	    height: 195px; 
+	    width: 125px; 
+	    padding: 0px; 
+	    top: 108px; 
+	    left: 138px; 
+	    transform: rotate(35deg) skew(0deg); 
+	    -webkit-transform: rotate(43.25deg) skew(0deg); 
+	}
+
+	#pcube{
+		width: 30px;
+		height: 30px;
+	}
+
+	#hcube{
+		width: 30px;
+		height: 30px;
+	}
+
+	.hurdle {
+		width: 30px;
+		height: 30px;
+	}
+
+	.h1z{
+		z-index: +5;
+	}
+
+	.h2z{
+		z-index: +5;
+	}
+
+	.h3z{
+		z-index: +5;
+	}
+
+	.h4z{
+		z-index: +5;
+	}
+
+	.h5z{
+		z-index: +5;
+	}
+
+	.h1_2z{
+		z-index: +5;
+	}
+
+	.h2_2z{
+		z-index: +5;
+	}
+
+	.h3_2z{
+		z-index: +5;
+	}
+
+	.h4_2z{
+		z-index: +5;
+	}
+
+	.h5_2z{
+		z-index: +5;
+	}
+
+	.laneWrapper{
+		overflow: hidden;
+		position: relative;
+		z-index: -1;
+		top: 15%;
+		height: 85%;
+	    -webkit-transform: rotate(0deg);
+	    -moz-transform: rotate(0deg);
+	    -ms-transform: rotate(0deg);
+	    -o-transform: rotate(0deg);
+	    transform: rotate(0deg);
+	}
+
+	.lane{
+		width: 100%;
+		top: 178px;
+		border-top: 2px solid black;
+		border-bottom: 2px solid black;
+		overflow: hidden;
+		height: 122px;
+		position: absolute;
+		/*z-index: +1;*/
+	}
+
+	.ledge-pic{
+		top: 177px;
+		width: 400px;
+		height: 1375px;
+		position: fixed;
+		z-index: -1;
+		overflow: hidden;
+	}
+
+	.lane-top-block{
+		position: relative;
+		top: 180px;
+		width: 100%;
+		height: 120px;
+		opacity: 0.2%;
+		background-color: white;
+		z-index: -2;
+	}
+
+	.ledge-side-block{
+		position: relative;
+		top: 178px;
+		width: 100%;
+		height: 100%;
+		opacity: 0.2%;
+		z-index: -2;
+		background-color: white;
+	}
+
+	.ledge-block{
+		background-color: white;
+		top: 170px;
+		position: absolute;
+		z-index: +2;
+		height: 1000px;
+		width: 91px;
+	}
+
+	.ledge-block2{
+		background-color: white;
+		top: 171px;
+		position: absolute;
+		z-index: +2;
+		height: 10px;
+		width: 201px;
+	}
+
+	.ledge-block3{
+		background-color: white;
+		top: 105px;
+		position: absolute;
+		z-index: +2;
+		height: 75px;
+		width: 200px;
+	}
+
+	.ledge-block3-2{
+		background-color: white;
+		top: 280px;
+		position: absolute;
+		z-index: +2;
+		height: 75px;
+		width: 200px;
+	}
+
+	.ledge-block4{
+		background-color: white; 
+	    position: absolute; 
+	    height: 194px; 
+	    width: 125px; 
+	    padding: 0px; 
+	    top: 108px; 
+	    left: 30px; 
+	    transform: rotate(35deg) skew(0deg); 
+	    -webkit-transform: rotate(43.25deg) skew(0deg); 
+	}
+
+	.ledge-block5{
+		background-color: white;
+		top: 168px;
+		left: 310px;
+		position: absolute;
+		z-index: +2;
+		height: 10px;
+		width: 201px;
+	}
+
+	#start{
+		top: 45px;
+		left: 35%;
+		position: absolute;
+		z-index: +2;
+		font-size: 150%;
+		font-family: 'Poppins', sans-serif;
+	}
+
+/*	.ledge-pic2{
+		width: 400px;
+		height: 1375px;
+		position: fixed;
+		z-index: -2;
+		overflow: hidden;
+	}
+
+	.drop-off{
+		z-index: -1;
+		width: 200px;
+		height: 1375px;
+		position: fixed;
+		overflow: hidden;
+	}*/
+
+/*	.drop-off-block{
+		z-index: +2;
+		position: fixed;
+		background-color: white;
+		width: 26.70px;
+		height: 45px;
+	}
+
+	.drop-off-block2{
+		z-index: +2;
+		position: fixed;
+		background-color: white;
+		width: 69px;
+		height: 20px;
+	}*/
+
+	#scoreDiv{
+		margin-left: 5%;
+		margin-top: 2%;
+	}
+
+/*	.title{
+		width: 10%;
+		position: relative;
+		padding: .5%;
+		color: white;
+		left: 25%;
+	}*/
+
+	#shopBtn{
+		position: absolute;
+		padding-top: 8px;
+		font-size: 20px;
+		/*float: left;*/
+		cursor: pointer;
+		left: 70%;
+		color: white;
+	}
+
+	#loginFailedModal .modal-dialog{
+		width: 5%;
+		height: 5%;
+	}
+
+	#loginSuccessModal .modal-dialog{
+		width: 25%;
+		height: 25%;
+	}
+
+
+
+
+	/*clean css*/
+
+	#shopDiv{
+		/*z-index: -1;*/
+		overflow: hidden;
+		width: 298px;
+		height: 175px;
+		background-color: white;
+		text-align: center;
+	}
+
+	#shopSelectLeft{
+		top: 35%;
+		position: absolute;
+		z-index: +1;
+		margin-left: -8%;
+		vertical-align: middle;
+		/*float: left;*/
+		font-size: 90px;
+		cursor: pointer;
+	}
+
+	#shopSelectRight{
+		left: 290px;
+		top: 35%;
+		position: absolute;
+		z-index: +1;
+		margin-right: -8%;
+		vertical-align: middle;
+		/*float: right;*/
+		font-size: 90px;
+		cursor: pointer;
+	}
+
+	#shopDiv i{
+		margin-top: 10%;
+	}
+
+	.notSelected{
+		opacity: 0.2;
+	}
+
+
+	.itemDiv{
+		/*overflow: hidden;*/
+		/*from 1 to 2, 135, -55*/
+		/*from 2 to 3, 138, -219*/
+		width: 750px;
+		margin-left: -80px;
+		margin-top: 2.5%;
+	}
+
+	.itemInfo{
+		float: left;
+		margin-top: 2.5%;
+		margin-left: 5%;
+	}
+
+	.itemPic{
+		float: left;
+		padding: 0px;
+		height: 100px;
+		width: 100px;
+		margin-bottom: 0px !important;
+		margin-left: 5%;
+	}
+
+	#coinPic{
+		width: 20px;
+		height: 20px;
+	}
+
+	#purchaseItem{
+		margin-bottom: 12%;
+	}
+
+/*	.itemPrice{
+		float: left;
+		margin-left: 50px;
+		margin-top: -40px;
+	}*/
+
+	#currentHat{
+		top: -50px;
+		left: -4px;
+		position: relative;
+		z-index: +5;
+		width: 37px;
+	}
+
+	#hatPlaceHolder{
+
+	}
+
+	.hat{
+		position: relative;
+		height: 30px;
+		width: 30px;
+	}
+
+	.hatStore{
+		position: relative;
+		height: 30px;
+		width: 30px;
+	}
+
+	.hatProfile{
+		top: -12;
+		left: -11;
+		position: relative;
+		height: 30px;
+		width: 30px;
+	}
+
+	#optionsBtn{
+		margin-right: 2%;
+		color: white;
+		padding-top: 8px;
+		font-size: 20px;
+		float: right;
+		cursor: pointer;
+	}
+
+	#hsBtn{
+		position: absolute;
+		padding-top: 8px;
+		font-size: 20px;
+		/*float: left;*/
+		cursor: pointer;
+		left: 81%;
+		color: white;
+	}
+
+	#battleBtn{
+		position: absolute;
+		padding-top: 8px;
+		font-size: 20px;
+		/*float: left;*/
+		cursor: pointer;
+		left: 60%;
+		color: white;
+	}
+
+	#battleBtn2{
+		position: absolute;
+		padding-top: 8px;
+		font-size: 20px;
+		/*float: left;*/
+		cursor: pointer;
+		left: 58.80%;
+		color: grey;
+	}
+
+	#profileNav{
+		font-size: 28px;
+		width: 120px;
+		color: white;
+		margin-left: 2%;
+		float: left;
+	}
+
+	.homeBtn{
+		padding-top: 5px;
+		float: left;
+		cursor: pointer;
+	}
+
+	#profileDiv{
+		background-color: white;
+		top: -150px;
+		position: absolute;
+		width: 450px;
+		height: 150px;
+		background-color: white;
+		border-right: 3px solid black;
+		border-bottom: 3px solid black;
+	}
+
+	#spot0, #spot1, #spot2, #spot3, #spot4{
+		cursor: pointer;
+	}
+
+	.hr {float:left;margin-top:5%;margin-left:2%;width:1px;height:100px;background-color:#000000;}
+
+	#loginBtn{
+		color: white;
+		padding-top: 8px;
+		font-size: 15px;
+		float: left;
+		cursor: pointer;
+        /*font-weight: 180;*/
+        font-family: 'Poppins', sans-serif;
+	}
+
+	#signUpDiv{
+		float: left;
+		margin-top: 10%;
+		margin-left: 3%;
+		margin-right: 2%;
+	}
+
+	#loginDiv form{
+		float: left;
+		margin-top: 2%;
+		margin-left: 2%;
+	}
+
+	#loginDiv{
+		background-color: white;
+		top: -150px;
+		/*z-index: -1;*/
+		position: absolute;
+		width: 450px;
+		height: 150px;
+		background-color: white;
+		border-right: 3px solid black;
+		border-bottom: 3px solid black;
+	}
+
+	#loginTitle{
+		font-size: 20px;
+	}
+
+	nav{
+		position: absolute;
+		z-index: +1;
+		text-align: center;
+		width: 100%;
+		height: 38px;
+		background-color: black;
+	}
+
+	#info{
+		float: left;
+		margin-left: 5%;
+	}
+
+	#stats{
+		margin-right: 5%;
+		float: right;
+	}
+
+	#profile{
+		width: 100%;
+		text-align: center;
+		font-size: 22px;
+	}
+
+	#logOutBtn{
+		margin-top: 10%;
+	}
+
+	#closet{
+		overflow: auto;
+		margin-left: 5%;
+		margin-top: 12%;
+	}
+
+	.pitem{
+		width: 45px;
+		height: 45px;
+		padding: 0%;
+		margin: 1%;
+		float: left;
+	}
+
+	.item{
+		margin: 1%;
+	}
+
+	#highscoreDiv{
+		background-color: white;
+		border: 3px solid black;
+		border-top: none;
+		position: absolute;
+		left: 73.50%;
+		top: -150px;
+		/*border: 1px solid black;*/
+		height: 150px;
+		width: 250px;
+	}
+
+	.hsUsername{
+		float: left;
+	}
+
+	#highscorelist{
+		margin-left: 14.50%;
+		width: 75%;
+		margin-top: 5%;
+	}
+
+/*	#highscorelist td{
+		float: left;
+	}*/
+
+	#highscorelist table{
+		width: 100%;
+	}
+
+	/*multiplayer action board*/
+
+	#messageDiv{
+		top: 8%;
+		left: 1%;
+		position: absolute;
+		z-index: +2;
+		font-weight: bold; 
+		font-family: 'Poppins', sans-serif;
+	}
+
+	#ready{
+		color: #006400;
+	}
+
+	#notReady{
+		color: #8B0000;
+	}
+
+	#podium{
+		width: 300px;
+		height: 150px;
+		margin-left: 250px;
+	}
+
+	#gameResultsWinner{
+		margin-left: 20px;
+	}
+
+	#rematchDiv{
+		margin-top: 10px;
+		margin-left: 20px;
+		float: left;
+	}
+
+	.rematch{
+
+	}
+
+	#winner{
+		width: 60px;
+    	height: 30px;
+		position: absolute;
+		z-index: +1;
+		top: 60px;
+		left: 402.5px;
+	}
+
+	#loser{
+		width: 60px;
+    	height: 30px;
+		position: absolute;
+		z-index: +1;
+		top: 100px;
+		left: 267.5px;
+	}
+
+	#winnerCube, #loserCube{
+		margin-left: 60px;
+	}
+
+/*	#winnerCube{
+		margin-left: 60px;
+	}*/
+
+	#podiumSpot1, #podiumSpot2{
+		width: 150px;
+		margin-bottom: 25px;
+		text-align: center;
+	}
+
+	#resultsBtn{
+		margin-right: 2%;
+		color: white;
+		padding-top: 8px;
+		font-size: 20px;
+		float: right;
+		cursor: pointer;
+	}
+

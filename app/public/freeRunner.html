@@ -1,0 +1,409 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Free Runner</title>
+    <link href='http://fonts.googleapis.com/css?family=Coda' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+  	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/bgrins/spectrum/master/spectrum.js"></script>
+	<link href="https://cdn.rawgit.com/bgrins/spectrum/master/spectrum.css" rel="stylesheet"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+	<nav>
+		<div id="profileNav">
+			<!-- <div id="profileTitle"><b>Profile</b></div> -->
+			<div id="loginBtn"><p>Login | Sign up</p></div>
+			<i id="profileBtn" class='homeBtn fa fa-caret-down' aria-hidden='true'></i>
+		</div>
+<!-- 		<div class="title">
+			Free Runner
+		</div> -->
+		<!-- div id="navMenu"> -->
+			<div id="multiplayerBtn"><i id="battleBtnPic" class="fa fa-cube" aria-hidden="true"></i><i id="battleBtnPic2" class="fa fa-cube" aria-hidden="true"></i></div>
+			<i id="shopBtn" class="fa fa-usd" aria-hidden="true"></i>
+			<i id="hsBtn" class="fa fa-list-ol" aria-hidden="true"></i>
+			<i id="optionsBtn" class="fa fa-cog" aria-hidden="true"></i>
+		<!-- </div> -->
+	</nav>
+
+	<div id="loginDiv">
+			<!-- <p><b>Login:</b></p> -->
+			<form>
+				<p id="loginTitle"><b>Login:</b></p>
+				<label>Username:</label>
+				<input id="usernameInput" type="text" required>
+				<br>
+				<label>Password:</label>
+				<input id="passwordInput" type="password" required>
+				<br>
+				<button type="button" class="btn btn-default" id="submitLoginInfo">Login</button>
+  			</form>
+  			<div class="hr">&nbsp;</div>
+  			<div id="signUpDiv"><center>Don't have an account? <br><button type="button" class="btn btn-default" id="signUp">Sign up!</button></center></div>
+	</div>
+
+	<div id="profileDiv">
+		<div id="profile">
+			<p><b>Profile</b></p>
+		</div>
+
+		<div id="info">
+			<!-- p>Name:</p> -->
+			<span>Name: </span><span id="userName"></span>
+		</div>
+		<div id="stats">
+			<span>Personal Best: </span><span id="profileHs">----</span>
+			<br>
+			<span><img id="coinPic" src="css/images/coin.png">'s: </span><span id="profileCoins">$</span>
+			<!-- <span><p>Players Defeated:</p></span> -->
+			<br>
+			<div id="logOutBtn"><button type="button" class="btn btn-default" id="logOutRequest">Logout</button></div id="logOutBtn">
+		</div>
+		<div id="closet">
+			<div id="spot0" data-id="0" class="pitem well"></div>
+			<div id="spot1" data-id="1" class="pitem well"></div>
+			<div id="spot2" data-id="2" class="pitem well"></div>
+			<div id="spot3" data-id="3" class="pitem well"></div>
+			<div id="spot4" data-id="4" class="pitem well"></div>
+		</div>
+		<!-- add logout -->
+	</div>
+
+	<div id="highscoreDiv">
+
+		<center><b>Top High Score List</b></center>
+
+		<div id="highscorelist">
+			<table>
+			<tr>
+				<td class="rank1name"><b>1.</b> </td>
+				<td class="rank1score"></td>
+			</tr>
+			<tr>
+				<td class="rank2name"><b>2.</b> </td>
+				<td class="rank2score"></td>
+			</tr>
+			<tr>
+				<td class="rank3name"><b>3.</b> </td>
+				<td class="rank3score"></td>
+			</tr>
+			<tr>
+				<td class="rank4name"><b>4.</b> </td>
+				<td class="rank4score"></td>
+			</tr>
+			<tr>
+				<td class="rank5name"><b>5.</b> </td>
+				<td class="rank5score"></td>
+			</tr>
+
+			</table>
+			<div id='hsoptions'></div>
+		</div>
+	</div>
+
+
+		<div id="cloud1"></div>
+		<div id="cloud2"></div>
+
+
+
+		<div id="start">
+			<h1>Press 'Shift' + 'S' to start</h1>
+		</div>
+
+		<div class="instructions"><b><h4><span>Dodge the </span><span><img id="hcubeInstruction" src="css/images/hcube.png"></span><span> and collect</span><span><img id="hcube" src="css/images/coin.png"></span><span> for a higher score and to purchase items!</span></h4></b></div>
+
+	<!-- div id="scoreDiv"></div> -->
+
+
+<!-- 		<img class="drop-off" id="dropoff" src="dropoff.png" style="top:40.75%;left:50%;">
+		<img class="ledge-pic2" id="ledge-pic2" src="startLedge2.png" style="top:40.50%;left:55%;" -->
+
+	<div class="laneWrapper">
+
+		<div id="ledge-block"></div>
+		<div id="ledge-block2"></div>
+		<div id="ledge-block3"></div>
+		<div id="ledge-block4"></div>
+
+		
+		<img id="ledge-pic" src="css/images/startLedge4.png">
+
+			<div id="lane-top-block"></div>
+
+		<div id="ledge-side-block"></div>
+
+
+		<div class="lane">
+<!-- <div class="h1z hurdle" id="hurdle1" style="position:fixed;left:17%;top:168.5px;"><img id="hcube" src="css/images/hcube.png"></div>
+<div class="h2z hurdle" id="hurdle2" style="position:fixed;left:16%;top:191.4px;"><img id="hcube" src="css/images/hcube.png"></div>
+<div class="h3z hurdle" id="hurdle3" style="position:fixed;left:15%;top:214.3px;"><img id="hcube" src="css/images/hcube.png"></div>
+<div class="h4z hurdle" id="hurdle4" style="position:fixed;left:14%;top:237.2px;"><img id="hcube" src="css/images/hcube.png"></div>
+<div class="h5z hurdle" id="hurdle5" style="position:fixed;left:13%;top:260.1px"><img id="hcube" src="css/images/hcube.png"></div> -->
+		</div>
+
+<div id='boxside'>
+		<div class="box">
+			<img id="pcube" src="css/images/pcube.png">
+			<!-- <img id="currentHat" class="hat" src="css/images/hat1.png"> -->
+		</div>
+</div>
+
+	</div>
+
+
+				<!-- success Modal -->
+<div class="modal fade bs-example-modal-sm" id="successModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+	  <div class="modal-dialog modal-sm" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Login Successful!</h4>
+		      </div>
+		      <div class="modal-footer">
+		        <!-- <a href="/admin"> --><button id="loginAccept" type="button" class="btn btn-default" >Okay</button><!-- </a> -->
+		      </div>
+		    </div>
+		  </div>
+	</div>
+
+		<!-- !success modal -->
+	<div class="modal fade bs-example-modal-sm" id="unsuccessModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+	  <div class="modal-dialog modal-sm" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Invalid username or password</h4>
+		      </div>
+		      <div class="modal-body">
+		      	<div id="error">
+		        	<h2><span class="glyphicon glyphicon-ban-circle"></span></h2> 
+		        	<h4>Try Again</h4>
+		        </div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>
+	</div>
+
+		<!-- shop modal -->
+	<div class="modal fade bs-example-modal-sm" id="shopModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+	  <div class="modal-dialog modal-sm" role="document">
+	    <div class="modal-content">
+	    	<div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Shop</h4>
+		    </div>
+
+
+		     <i id="shopSelectLeft" class="fa fa-caret-left" aria-hidden="true"></i>
+			<div id="shopDiv">
+
+
+				<div class="itemDiv">
+					<div class="itemInfo">
+						<div class="well itemPic"><img id="item0pic" class="hatStore notSelected" src="css/images/hat0.png"></div>
+						<div id="price0" class="itemPrice" data-id="1"><img id="coinPic" src="css/images/coin.png">1</div>
+					</div>
+					<div class="itemInfo">
+						<div class="well itemPic"><img id="item1pic" class="hatStore currentItem" src="css/images/hat1.png"></div>
+						<div id="price1" class="itemPrice" data-id="5"><img id="coinPic" src="css/images/coin.png">5</div>
+					</div>
+					<div class="itemInfo">
+						<div class="well itemPic"><img id="item2pic" class="hatStore notSelected" src="css/images/hat2.png"></div>
+						<div id="price2" class="itemPrice" data-id="10"><img id="coinPic" src="css/images/coin.png">10</div>
+					</div>
+					<div class="itemInfo">
+						<div class="well itemPic"><img id="item3pic" class="hatStore notSelected" src="css/images/hat3.png"></div>
+						<div id="price3" class="itemPrice" data-id="15"><img id="coinPic" src="css/images/coin.png">15</div>
+					</div>
+					<div class="itemInfo">
+						<div class="itemPic well"><img id="item4pic" class="hatStore notSelected" src="css/images/hat4.png"></div>
+						<div id="price4" class="itemPrice" data-id="20"><img id="coinPic" src="css/images/coin.png">20</div>
+					</div>
+				</div>
+
+				<!-- <button id="purcahseItem" data-id="1">Purchase</button> -->
+			</div>
+			<center>
+			<span><img id="coinPic" src="css/images/coin.png">'s: </span><span id="shopCoins">$</span>
+			<br>
+			<button type="button" class="btn btn-default" id="purchaseItem" data-id="1">Purchase</button>
+			</center>
+			<i id="shopSelectRight" class="fa fa-caret-right" aria-hidden="true"></i>
+
+	    </div>
+	  </div>
+	</div>
+
+			<!-- signout modal -->
+	<div class="modal fade bs-example-modal-sm" id="logOutModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+	  <div class="modal-dialog modal-sm" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h5 class="modal-title" id="myModalLabel">Are you sure you want to log out?</h5>
+		      </div>
+<!-- 		      <div class="modal-body">
+		        <h2><span class="glyphicon glyphicon-ban-circle"></span></h2> <h4>Try Again</h4>
+		      </div> -->
+		      <div class="modal-footer">
+		      	<button type="button" class="btn btn-default" id="logOutConfirm">Yes</button>
+		        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+		      </div>
+		    </div>
+		  </div>
+	</div>
+
+	<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div id="loginFailedModal" class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Sign up:</h4>
+		      </div>
+		      <div class="modal-body">
+			    <form>
+					<label>Enter your desired username and password:</label>
+					<br>
+					<label>username - </label>
+					<input id="signupUserName" type="text" required>
+					<br>
+					<label>password - </label>
+					<input id="signupPassword" type="password" required>
+					<br>
+					<br>
+					<label>verify password - </label>
+					<input id="signupPasswordCheck" type="password" required>
+					<br>
+	  			</form>
+		      </div>
+		      <div class="modal-footer">
+		      	<input type="submit" class="btn btn-default" id="submitNewUser">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+		      </div>
+		    </div>
+		  </div>
+	</div>
+
+	<div class="modal fade" id="lobbyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <div class="modal-title" id="myModalLabel">
+		        <center>
+			      	<i id="lobbyPic1" class="lobbyPics fa fa-cube" aria-hidden="true"></i>
+			      	<i id="lobbyPic2" class="lobbyPics fa fa-cube" aria-hidden="true"></i>
+			    </center>
+		      	</div>
+
+		      </div>
+		      <div class="modal-body">
+		      	<span id='lobbyWelcome'>Welcome to Multiplayer!</span>
+		      	<h5>Select an open lobby to join or click create lobby to host your own!</h5>
+		      	<button id="createLobby" type="button" class="btn btn-default">Create Lobby</button>
+			    <div id='gameLobby'>
+					<div id='lobbyBoardTitles'>
+						<b>#<span id='lobbyNameTitle'>Lobby Name:</span><span>Players:</span><span id='statusTitle'>Status:</span></b>
+					</div>
+					<div id='lobbyBoard'>
+						<!-- <div class="lobby">3<span class='lobbyName'>000000000</span><span>2/2</span><span>closed</span></div> -->
+					</div>
+				</div>
+
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+		      </div>
+		    </div>
+		  </div>
+	</div>
+
+	<div class="modal fade" id="optionsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div id="loginFailedModal" class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Options:</h4>
+		      </div>
+		      <div class="modal-body">
+		      	<div id='instructions'>
+		      		<h3>Instructions: </h3>
+		      		<button id='instructionsBtn' type="button" class="btn btn-default">Off</button>
+		      	</div>
+		      	<div id='instructions'>
+		      		<h3>Color: </h3>
+		      		<input type="text" id="backgroundColorPicker" />
+		      	</div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>
+	</div>
+
+<!-- 	<div class="modal fade" id="gameOverModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div id="loginFailedModal" class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Game over:</h4>
+		      </div>
+		      <div class="modal-body">
+	<div id="gameOverScoreDiv">
+					<span>Score: </span><span id="gameOverScore"></span>
+				</div>
+				<br>
+				<div id="gameOverCoinDiv">
+					<span><img id="hcube" src="css/images/coin.png">: </span><span id="gameOverCoin"></span>
+				</div>
+
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>
+	</div> -->
+
+	<div class="modal fade bs-example-modal-sm" id="gameOverModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+	  <div class="modal-dialog modal-sm" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Game over:</h4>
+		      </div>
+		      <div class="modal-body">
+<!-- here -->	<div id="gameOverScoreDiv">
+					<center><span>Score: </span><span id="gameOverScore"></span></center>
+				</div>
+				<br>
+				<div id="gameOverCoinDiv">
+					<center><span><img id="hcube" src="css/images/coin.png">: </span><span id="gameOverCoin"></span></center>
+				</div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>
+	</div>
+
+
+<script src="https://use.fontawesome.com/2ce3b4e69a.js"></script>
+<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+<script type="text/javascript" src="freeRunnerLogic.js"></script>
+</body>
+</html>
